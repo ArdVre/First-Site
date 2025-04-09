@@ -1,86 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ard</title>
-  <link rel="stylesheet" href="/styles/form.css">
-  <link rel="stylesheet" href="/styles/globals.css">
+  <meta name="description" content="Contactformulier - Laat een bericht achter voor Ard Vreugdenhil">
+  <title>Ard Vreugdenhil | Formulier</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-
 <body>
-  <form class="form">
-    <a class="back" href="index.html"><strong>&xlArr;</strong></a>
-    <h1>Formulier</h1>
-    <div>
-      <label id="naamm"></label>
-      <input class="input" id="voornaam" type="text" placeholder="Voornaam">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Ard</a>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">Over mij</a></li>
+        <li><a href="gallery.html">Foto's</a></li>
+      </ul>
     </div>
-    <div>
-      <label id="achternaamm"></label>
-      <input class="input" id="achternaam" type="text" placeholder="Achternaam">
+  </nav>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <h1>Contactformulier</h1>
+      <p>Vul het formulier in om contact op te nemen</p>
     </div>
-    <div>
-      <label id="wachtwoord"></label>
-      <input class="input" type="password" placeholder="Wachtwoord">
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <section class="section">
+        <div class="form-container">
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="first-name" class="form-label">Voornaam</label>
+              <input type="text" id="first-name" class="form-control" placeholder="Voornaam" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="last-name" class="form-label">Achternaam</label>
+              <input type="text" id="last-name" class="form-control" placeholder="Achternaam" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="password" class="form-label">Wachtwoord</label>
+              <input type="password" id="password" class="form-control" placeholder="Wachtwoord">
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="form-label">E-mail</label>
+              <input type="email" id="email" class="form-control" placeholder="E-mail">
+            </div>
+            
+            <div class="form-group">
+              <label for="phone" class="form-label">Telefoonnummer</label>
+              <input type="tel" id="phone" class="form-control" placeholder="Telefoonnummer">
+            </div>
+            
+            <div class="form-group">
+              <label for="birthdate" class="form-label">Geboortedatum</label>
+              <input type="date" id="birthdate" class="form-control">
+            </div>
+            
+            <div class="buttons-container">
+              <button type="reset" class="btn btn-secondary">Reset</button>
+              <button type="submit" class="btn btn-primary">Verzenden</button>
+            </div>
+          </form>
+        </div>
+      </section>
     </div>
-    <div>
-      <label id="email"></label>
-      <input class="input" type="email" placeholder="E-mail">
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="footer-text">&copy; 2025 Ard Vreugdenhil | Eerste HTML Project</p>
     </div>
-    <div>
-      <label id="nummer"></label>
-      <input class="input" type="tel" placeholder="Telefoonnummer">
-    </div>
-    <div>
-      <label id="leeftijd"></label>
-      <input class="input" type="date">
-    </div>
+  </footer>
 
-    <div class="button">
-      <input type="reset" id="reset">
-
-      <!-- <input type="submit" id="submit" value="verstuur"> -->
-      <input type="submit" id="submit" value="Verzenden">
-    </div>
-
-  </form>
-  
-
-<script>
-  const form = document.querySelector(".form");
-
-  form.addEventListener("submit", function(e) {
-      e.preventDefault(); // voorkom standaard verzenden
-
-      const voornaam = document.getElementById("voornaam").value.trim();
-      const achternaam = document.getElementById("achternaam").value.trim();
-
-      if (voornaam !== "" && achternaam !== "") {
-          localStorage.setItem("voornaam", voornaam);
-          localStorage.setItem("achternaam", achternaam);
-
-          window.location.href = "bedankt.html";
-      } else {
-          alert("Vul a.u.b uw gegevens in.");
-      }
-  });
-</script>
-<script>
-    window.addEventListener("beforeunload", function (e) {
-      const voornaam = localStorage.getItem("voornaam");
-  
-      if (voornaam) {
-        const boodschap = `Bedankt voor je bezoek, ${voornaam}! We hopen je snel weer te zien.`;
-  
-        // Let op: de returnValue moet worden gezet voor de alert-popup te werken.
-        e.preventDefault();
-        e.returnValue = boodschap; // Sommige browsers tonen hun eigen standaardtekst
-        return boodschap;
-      }
-    });
-  </script>
-
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
 </body>
+</html>

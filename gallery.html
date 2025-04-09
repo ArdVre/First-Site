@@ -1,71 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ard</title>
-    <link rel="stylesheet" href="styles/gallery.css" />
+    <meta name="description" content="Fotogalerij van Ard Vreugdenhil - Bekijk mijn foto's en herinneringen">
+    <title>Ard Vreugdenhil | Foto's</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   </head>
 
   <body>
-    <nav>
-      <a href="index.html" id="home">Home</a>
-      <a href="/aboutme.html" id="about-me">Over mij</a>
-      <a href="gallery.html" id="gallery">Foto's</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="index.html" class="logo">Ard</a>
+        
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutme.html">Over mij</a></li>
+          <li><a href="gallery.html">Foto's</a></li>
+        </ul>
+      </div>
     </nav>
 
-    <header>
-      <h1>Foto's</h1>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <h1>Mijn Foto's</h1>
+        <p>Een verzameling van mijn favoriete herinneringen</p>
+      </div>
     </header>
 
+    <!-- Main Content -->
     <main>
-      <div class="card">
-        <img src="/schaken.webp" alt="fietsen naar groningen" title="fietsen naar groningen" />
-        <h3>Schaken</h3>
-        <p>Schaken tijdens het fietsen naar Groningen met een vriend</p>
-      </div>
-      <div class="card">
-        <img src="brussel.webp" alt="dagje Brussel" title="dagje Brussel" />
-        <h3>Brussel</h3>
-        <p>Een dagje naar Brussel met een vriend</p>
-      </div>
-      <div class="card">
-        <div>
-          <img src="dikkebertha.jpg" alt="dikke bertha" title="dikke bertha" />
-          <h3>Dikke Bertha</h3>
-        </div>
-        <p>Dikke bertha bij cafetaria Mainberg in Marienberg</p>
-      </div>
-      <div class="card">
-        <img src="niagarafalls.webp" alt="niagara falls" title="niagara falls" />
-        <h3>Niagara Falls</h3>
-        <p>Niagara Falls tijdens vakantie in Canada</p>
+      <div class="container">
+        <section class="section">
+          <div class="card-grid">
+            <div class="card">
+              <img src="assets/images/schaken.webp" alt="Schaken tijdens het fietsen" class="card-image">
+              <div class="card-content">
+                <h3 class="card-title">Schaken</h3>
+                <p class="card-text">Schaken tijdens het fietsen naar Groningen met een vriend</p>
+              </div>
+            </div>
+            
+            <div class="card">
+              <img src="assets/images/brussel.webp" alt="Dagje Brussel" class="card-image">
+              <div class="card-content">
+                <h3 class="card-title">Brussel</h3>
+                <p class="card-text">Een dagje naar Brussel met een vriend</p>
+              </div>
+            </div>
+            
+            <div class="card">
+              <img src="assets/images/dikkebertha.jpg" alt="Dikke Bertha" class="card-image">
+              <div class="card-content">
+                <h3 class="card-title">Dikke Bertha</h3>
+                <p class="card-text">Dikke bertha bij cafetaria Mainberg in Marienberg</p>
+              </div>
+            </div>
+            
+            <div class="card">
+              <img src="assets/images/niagarafalls.webp" alt="Niagara Falls" class="card-image">
+              <div class="card-content">
+                <h3 class="card-title">Niagara Falls</h3>
+                <p class="card-text">Niagara Falls tijdens vakantie in Canada</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
-    <script>
-        const pages = [
-          { name: "home", url: "/index.html" },
-          { name: "about-me", url: "/aboutme.html" },
-          { name: "gallery", url: "/gallery.html" },
-        ];
-        const currentPage = pages.find((page) => page.url === window.location.pathname);
-        console.log(window.location.pathname, currentPage);
-        if (currentPage) {
-          document.getElementById(currentPage.name).classList.add("active");
-        }
-    </script>
-    <script>
-      window.addEventListener("beforeunload", function (e) {
-        const voornaam = localStorage.getItem("voornaam");
-    
-        if (voornaam) {
-          const boodschap = `Bedankt voor je bezoek, ${voornaam}! We hopen je snel weer te zien.`;
-    
-          e.preventDefault();
-          e.returnValue = boodschap;
-          return boodschap;
-        }
-      });
-    </script>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p class="footer-text">&copy; 2025 Ard Vreugdenhil | Eerste HTML Project</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
   </body>
 </html>

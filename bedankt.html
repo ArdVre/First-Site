@@ -3,52 +3,63 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Bedankt!</title>
-</head>
-
-<head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bedankt</title>
-    <link rel="stylesheet" href="/styles/bedankt.css">
-    <link rel="stylesheet" href="/styles/globals.css">
+    <meta name="description" content="Bedankt voor het invullen van het formulier">
+    <title>Ard Vreugdenhil | Bedankt</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <h1 id="bedankt-titel">Bedankt!</h1>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Ard</a>
+            
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutme.html">Over mij</a></li>
+                <li><a href="gallery.html">Foto's</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 id="thank-you-title">Bedankt!</h1>
+        </div>
     </header>
-    <div>
-        <p id="bedankt-tekst"></p>
-        <a class="home" href="index.html">Home</a>
-    </div>
 
-    <script>
-        const voornaam = localStorage.getItem("voornaam") || "";
-        const achternaam = localStorage.getItem("achternaam") || "";
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <section class="section">
+                <div class="card">
+                    <div class="card-content">
+                        <p id="thank-you-text" class="card-text">Bedankt voor het invullen van het formulier.</p>
+                        <div class="buttons-container">
+                            <a href="index.html" class="btn btn-primary">Terug naar Home</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
 
-        if (voornaam && achternaam) {
-            document.getElementById("bedankt-titel").textContent = `Hallo, ${voornaam} ${achternaam}!`;
-            document.getElementById("bedankt-tekst").textContent = `Bedankt voor het invullen van mijn formulier.`;
-        } else {
-            document.getElementById("bedankt-tekst").textContent = "Je hebt nog geen gegevens ingevuld.";
-        }
-    </script>
-    <script>
-        window.addEventListener("beforeunload", function (e) {
-          const voornaam = localStorage.getItem("voornaam");
-      
-          if (voornaam) {
-            const boodschap = `Bedankt voor je bezoek, ${voornaam}! We hopen je snel weer te zien.`;
-      
-            // Let op: de returnValue moet worden gezet voor de alert-popup te werken.
-            e.preventDefault();
-            e.returnValue = boodschap; // Sommige browsers tonen hun eigen standaardtekst
-            return boodschap;
-          }
-        });
-      </script>
-      
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-text">&copy; 2025 Ard Vreugdenhil | Eerste HTML Project</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

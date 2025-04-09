@@ -9,6 +9,15 @@ html {
   color: #f4f4f4;
 }
 
+:root {
+  --color-background: #333;
+  --color-card: #222;
+  --color-text: #f4f4f4;
+  --color-accent: #6d7dda;
+  --spacing-standard: 1rem;
+  --border-radius: 10px;
+}
+
 .Section {
   display: flex;
   flex-direction: column;
@@ -25,7 +34,37 @@ html {
   padding: 10px 20px;
   border-radius: 20px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out !important;
+  transition: all 0.3s ease-in-out !important; 
+}
 
+nav {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: fixed;
+  top: 10px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  gap: 1em;
+  align-items: center;
+  padding: var(--spacing-standard);
+  z-index: 100;
+  background-color: var(--color-background);
+  border-radius: 100px;
   
+}
+
+.header {
+  background-color: var(--color-card);
+  padding: var(--spacing-standard);
+  text-align: center;
+  position: relative;
+  top: 100px;
+  left: 0;
+  right: 0;
+  height: 85px;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

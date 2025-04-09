@@ -40,39 +40,6 @@ body {
   padding-top: 200px;
 }
 
-nav {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  position: fixed;
-  top: 10px;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  gap: 1em;
-  align-items: center;
-  box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
-  padding: var(--spacing-standard);
-  z-index: 100;
-  background-color: var(--color-background);
-  border-radius: 100px;
-  
-}
-
-header {
-  background-color: var(--color-card);
-  padding: var(--spacing-standard);
-  text-align: center;
-  position: relative;
-  top: 100px;
-  left: 0;
-  right: 0;
-  height: 85px;
-  z-index: 90;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 nav a {
   text-decoration: none;
   background-color: var(--color-accent);

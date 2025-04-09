@@ -1,94 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ard</title>
-  <link rel="stylesheet" href="/styles/aboutme.css">
-  <link rel="stylesheet" href="/styles/globals.css">
+  <meta name="description" content="Leer meer over Ard Vreugdenhil - Hobby's, familie, muziek en meer">
+  <title>Ard Vreugdenhil | Over Mij</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-  <nav>
-    <a href="index.html" id="home">Home</a>
-    <a href="aboutme.html" id="about-me">Over mij</a>
-    <a href="gallery.html" id="gallery">Foto's</a>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Ard</a>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">Over mij</a></li>
+        <li><a href="gallery.html">Foto's</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <main class="Main">
-    <header>
-      <h1>Ard Vreugdenhil</h1>
-    </header>
-    <div class="row">
-      <div class="hobby">
-        <h3>Hobby's</h3>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <h1>Over Mij</h1>
+      <p>Leer meer over wie ik ben en wat ik leuk vind</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="container">
+      <section class="section about-layout">
+        <div class="about-column">
+          <div class="card">
+            <div class="card-content">
+              <h2 class="section-title">Hobby's</h2>
+              <ul class="info-list">
+                <li>Gamen met vrienden</li>
+                <li>Hardlopen</li>
+                <li>Fietsen</li>
+                <li>Schaken</li>
+                <li>Rubik's Cube oplossen</li>
+              </ul>
+              <div class="media-player">
+                <video controls class="media-video">
+                  <source src="assets/video/test.mp4" type="video/mp4">
+                  Je browser ondersteunt geen video.
+                </video>
+              </div>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-content">
+              <h2 class="section-title">Familie</h2>
+              <p class="card-text">Ik ben de jongste thuis. Ik heb een broer die in Groningen studeert en een zus die een tussenjaar heeft.</p>
+            </div>
+          </div>
+        </div>
         
-        <p>Gamen met vrienden</p>
-        <p>Hardlopen</p>
-        <p>Fietsen</p>
-        <p>Schaken</p>
-        <p>Rubik's Cube oplossen</p>
-
-        <video controls src="test.mp4"></video>
-      </div>
-      <div class="familie">
-        <h3> Familie</h3>
-        <p> Ik ben de jongste thuis. Ik heb een broer die in Groningen studeert en een zus die een tussenjaar heeft.</p>
-      </div>
-    </div>
-    <div class="muziek">
-      <h3>Muziek</h3>
-      <p>Ik luister ook veel muziek. Dit zijn twee nummers waar ik graag naar luister.</p>
-      <div>
-        <div id="lhg">
-          <audio controls src="passenger.mp3"></audio>
-          <p>Let Her Go - Passenger</p>
+        <div class="about-column">
+          <div class="card">
+            <div class="card-content">
+              <h2 class="section-title">Persoonlijke info</h2>
+              <ul class="info-list">
+                <li>Leeftijd: 16 jaar</li>
+                <li>Woonplaats: Pijnacker</li>
+                <li>Geboorteplaats: Zoetermeer</li>
+                <li>School: GSR Rotterdam</li>
+                <li>Niveau: VWO</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-content">
+              <h2 class="section-title">Muziek</h2>
+              <p class="card-text">Ik luister ook veel muziek. Dit zijn twee nummers waar ik graag naar luister.</p>
+              <div class="media-container">
+                <div class="media-item">
+                  <audio controls class="media-player">
+                    <source src="assets/audio/passenger.mp3" type="audio/mpeg">
+                    Je browser ondersteunt geen audio.
+                  </audio>
+                  <p class="media-title">Let Her Go - Passenger</p>
+                </div>
+                <div class="media-item">
+                  <audio controls class="media-player">
+                    <source src="assets/audio/Summer.mp3" type="audio/mpeg">
+                    Je browser ondersteunt geen audio.
+                  </audio>
+                  <p class="media-title">Summer Of '69 - Bryan Adams</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="Summer">
-          <audio controls src="Summer.mp3"></audio>
-          <p>Summer Of '69 - Bryan Adams</p>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div class="info">
-      <h3>Persoonlijke info</h3>
-      <p>Leeftijd: 16 jaar</p>
-      <p>Woonplaats: Pijnacker</p>
-      <p>Geboorteplaats: Zoetermeer</p>
-      <p>School: GSR Rotterdam</p>
-      <p>Niveau: VWO</p>
+      </section>
     </div>
   </main>
-  <script>
-    const pages = [
-      { name: "home", url: "/index.html" },
-      { name: "about-me", url: "/aboutme.html" },
-      { name: "gallery", url: "/gallery.html" },
-    ];
-    const currentPage = pages.find((page) => page.url === window.location.pathname);
-    console.log(window.location.pathname, currentPage);
-    if (currentPage) {
-      document.getElementById(currentPage.name).classList.add("active");
-    }
-  </script>
-  <script>
-    window.addEventListener("beforeunload", function (e) {
-      const voornaam = localStorage.getItem("voornaam");
-  
-      if (voornaam) {
-        const boodschap = `Bedankt voor je bezoek, ${voornaam}! We hopen je snel weer te zien.`;
-  
-        // Let op: de returnValue moet worden gezet voor de alert-popup te werken.
-        e.preventDefault();
-        e.returnValue = boodschap; // Sommige browsers tonen hun eigen standaardtekst
-        return boodschap;
-      }
-    });
-  </script>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="footer-text">&copy; 2025 Ard Vreugdenhil | Eerste HTML Project</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
 </body>
 
 </html>
