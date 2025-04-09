@@ -1,0 +1,111 @@
+:root {
+    --color-background: #333;
+    --color-card: #222;
+    --color-text: #f4f4f4;
+    --color-accent: #6d7dda;
+    --spacing-standard: 1rem;
+    --border-radius: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Arial, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 200px;
+}
+
+.form {
+    background-color: var(--color-card);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    width: 50%;
+    align-self: center;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px var(--color-accent);
+    position: fixed;
+    top: 25px;
+    padding-top: 25px;
+}
+
+.form div {
+    display: flex;
+    margin: 10px;
+    justify-content: space-around;
+    height: 50px;
+    
+}
+
+#reset{
+    color:var(--color-text);
+    background-color: red;
+    width: 200px;
+    border-radius: 10px;
+}
+
+#submit{
+    color: var(--color-text);
+    background-color: green; 
+    width: 200px;  
+    border-radius: 10px;
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
+    width: 75%;
+    text-align: center;
+    
+}
+
+.input{
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.back{
+    color: white;
+    font-size: 35px;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    width: 60px;
+    height: auto;
+    text-align: center;
+    position: fixed;
+    left: 27%;
+    &:hover {
+        background-color: #f4f4f4;
+        color: #4777de;
+        transition: background-color 0.3s, color 0.3s;
+      }
+}
+
+@media (max-width: 768px) {
+    body {
+      padding-top: 170px;
+    }
+  
+    nav,
+    header {
+      height: auto;
+      min-height: 70px;
+    }
+  
+    header {
+      top: 70px;
+    }
+  }

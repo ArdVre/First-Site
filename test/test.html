@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ard</title>
+  <link rel="stylesheet" href="/styles/form.css">
+  <link rel="stylesheet" href="/styles/globals.css">
+</head>
+
+
+<body>
+  <form class="form">
+    <a class="back" href="index.html"><strong>&xlArr;</strong></a>
+    <h1>Formulier</h1>
+    <div>
+      <label id="naamm"></label>
+      <input class="input" id="voornaam" type="text" placeholder="Voornaam">
+    </div>
+    <div>
+      <label id="achternaamm"></label>
+      <input class="input" id="achternaam" type="text" placeholder="Achternaam">
+    </div>
+    <div>
+      <label id="wachtwoord"></label>
+      <input class="input" type="password" placeholder="Wachtwoord">
+    </div>
+    <div>
+      <label id="email"></label>
+      <input class="input" type="email" placeholder="E-mail">
+    </div>
+    <div>
+      <label id="nummer"></label>
+      <input class="input" type="tel" placeholder="Telefoonnummer">
+    </div>
+    <div>
+      <label id="leeftijd"></label>
+      <input class="input" type="date">
+    </div>
+
+    <div class="button">
+      <input type="reset" id="reset">
+
+      <!-- <input type="submit" id="submit" value="verstuur"> -->
+      <input type="submit" id="submit" value="Verzenden">
+    </div>
+
+  </form>
+  
+
+<script>
+  const form = document.querySelector(".form");
+
+  form.addEventListener("submit", function(e) {
+      e.preventDefault(); // voorkom standaard verzenden
+
+      const voornaam = document.getElementById("voornaam").value.trim();
+      const achternaam = document.getElementById("achternaam").value.trim();
+
+      if (voornaam !== "" && achternaam !== "") {
+          localStorage.setItem("voornaam", voornaam);
+          localStorage.setItem("achternaam", achternaam);
+
+          window.location.href = "bedankt.html";
+      } else {
+          alert("Vul je voornaam en achternaam in.");
+      }
+  });
+</script>
+
+</body>

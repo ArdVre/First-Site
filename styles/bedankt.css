@@ -1,0 +1,104 @@
+.MainContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.MainContainer p {
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+:root {
+    --color-background: #333;
+    --color-card: #222;
+    --color-text: #f4f4f4;
+    --color-accent: #6d7dda;
+    --spacing-standard: 1rem;
+    --border-radius: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Arial, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 200px;
+}
+
+header {
+    background-color: var(--color-card);
+    padding: var(--spacing-standard);
+    text-align: center;
+    position: relative;
+    top: 100px;
+    left: 0;
+    right: 0;
+    height: 85px;
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin-top: 200px;
+}
+
+div {
+    background-color: var(--color-card);
+    padding: var(--spacing-standard);
+    text-align: center;
+    position: fixed;
+    top: 220px;
+    width: 60%;
+    height: auto;
+    z-index: 90;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px var(--color-accent);
+}
+
+div p {
+    line-height: 2;
+    font-size: xx-large;
+}
+
+.home {
+    background-color: var(--color-card);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-self: center;
+    top: 55%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    z-index: 91;
+    box-shadow: 0 4px 10px var(--color-accent);
+    text-decoration: none;
+}

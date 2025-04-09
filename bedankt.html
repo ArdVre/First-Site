@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bedankt!</title>
+</head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bedankt</title>
+    <link rel="stylesheet" href="/styles/bedankt.css">
+    <link rel="stylesheet" href="/styles/globals.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="bedankt-titel">Bedankt!</h1>
+    </header>
+    <div>
+        <p id="bedankt-tekst"></p>
+        <a class="home" href="index.html">Home</a>
+    </div>
+
+    <script>
+        const voornaam = localStorage.getItem("voornaam") || "";
+        const achternaam = localStorage.getItem("achternaam") || "";
+
+        if (voornaam && achternaam) {
+            document.getElementById("bedankt-titel").textContent = `Hallo, ${voornaam} ${achternaam}!`;
+            document.getElementById("bedankt-tekst").textContent = `Bedankt voor het invullen van mijn formulier.`;
+        } else {
+            document.getElementById("bedankt-tekst").textContent = "Je hebt nog geen gegevens ingevuld.";
+        }
+    </script>
+    <script>
+        window.addEventListener("beforeunload", function (e) {
+          const voornaam = localStorage.getItem("voornaam");
+      
+          if (voornaam) {
+            const boodschap = `Bedankt voor je bezoek, ${voornaam}! We hopen je snel weer te zien.`;
+      
+            // Let op: de returnValue moet worden gezet voor de alert-popup te werken.
+            e.preventDefault();
+            e.returnValue = boodschap; // Sommige browsers tonen hun eigen standaardtekst
+            return boodschap;
+          }
+        });
+      </script>
+      
+</body>
+
+</html>

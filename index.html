@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ard</title>
+  <link rel="stylesheet" href="/styles/index.css" />
+  <link rel="stylesheet" href="/styles/globals.css" />
+</head>
+
+<body>
+  <nav>
+    <a href="index.html" id="home">Home</a>
+    <a href="aboutme.html" id="about-me">Over mij</a>
+    <a href="gallery.html" id="gallery">Foto's</a>
+  </nav>
+  <header>
+    <h1>Home</h1>
+  </header>
+  <div>
+    <div class="text">
+      <p>Hallo en welkom bij mijn persoonlijke website.</p>
+      <p>Ik ben Ard Vreugdenhil en dit is mijn eerste project in HTML.</p>
+    </div>
+
+    <div class="knoppen">
+      <a href="form.html" class="form">Formulier</a>
+      <a class="form" type="button" id="verlaat">Verlaat de site</a>
+    </div>
+    
+  </div>
+  <script>
+    const pages = [
+      { name: "home", url: "/index.html" },
+      { name: "about-me", url: "/aboutme.html" },
+      { name: "gallery", url: "/gallery.html" },
+    ];
+    const currentPage = pages.find((page) => page.url === window.location.pathname);
+    console.log(window.location.pathname, currentPage);
+    if (currentPage) {
+      document.getElementById(currentPage.name).classList.add("active");
+    }
+  </script>
+
+  <script>
+    document.getElementById("verlaat").addEventListener("click", function () {
+      const voornaam = localStorage.getItem("voornaam") || "bezoeker";
+      const bevestiging = confirm(`Bedankt voor je bezoek, ${voornaam}! Weet je zeker dat je de site wilt verlaten?`);
+
+      if (bevestiging) {
+        window.location.href = "https://www.google.com"; // of een andere externe site
+      }
+    });
+  </script>
+
+
+</body>
+
+</html>

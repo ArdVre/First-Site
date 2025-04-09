@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ard</title>
+  <link rel="stylesheet" href="/styles/aboutme.css">
+  <link rel="stylesheet" href="/styles/globals.css">
+</head>
+
+<body>
+  <nav>
+    <a href="index.html" id="home">Home</a>
+    <a href="aboutme.html" id="about-me">Over mij</a>
+    <a href="gallery.html" id="gallery">Foto's</a>
+  </nav>
+
+  <main class="Main">
+    <header>
+      <h1>Ard Vreugdenhil</h1>
+    </header>
+    <div class="row">
+      <div class="hobby">
+        <h3>Hobby's</h3>
+        
+        <p>Gamen met vrienden</p>
+        <p>Hardlopen</p>
+        <p>Fietsen</p>
+        <p>Schaken</p>
+        <p>Rubik's Cube oplossen</p>
+
+        <video controls src="test.mp4"></video>
+      </div>
+      <div class="familie">
+        <h3> Familie</h3>
+        <p> Ik ben de jongste thuis. Ik heb een broer die in Groningen studeert en een zus die een tussenjaar heeft.</p>
+      </div>
+    </div>
+    <div class="muziek">
+      <h3>Muziek</h3>
+      <p>Ik luister ook veel muziek. Dit zijn twee nummers waar ik graag naar luister.</p>
+      <div>
+        <div id="lhg">
+          <audio controls src="passenger.mp3"></audio>
+          <p>Let Her Go - Passenger</p>
+        </div>
+        <div id="Summer">
+          <audio controls src="Summer.mp3"></audio>
+          <p>Summer Of '69 - Bryan Adams</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="info">
+      <h3>Persoonlijke info</h3>
+      <p>Leeftijd: 16 jaar</p>
+      <p>Woonplaats: Pijnacker</p>
+      <p>Geboorteplaats: Zoetermeer</p>
+      <p>School: GSR Rotterdam</p>
+      <p>Niveau: VWO</p>
+    </div>
+  </main>
+  <script>
+    const pages = [
+      { name: "home", url: "/index.html" },
+      { name: "about-me", url: "/aboutme.html" },
+      { name: "gallery", url: "/gallery.html" },
+    ];
+    const currentPage = pages.find((page) => page.url === window.location.pathname);
+    console.log(window.location.pathname, currentPage);
+    if (currentPage) {
+      document.getElementById(currentPage.name).classList.add("active");
+    }
+  </script>
+  <script>
+    window.addEventListener("beforeunload", function (e) {
+      const voornaam = localStorage.getItem("voornaam");
+  
+      if (voornaam) {
+        const boodschap = `Bedankt voor je bezoek, ${voornaam}! We hopen je snel weer te zien.`;
+  
+        // Let op: de returnValue moet worden gezet voor de alert-popup te werken.
+        e.preventDefault();
+        e.returnValue = boodschap; // Sommige browsers tonen hun eigen standaardtekst
+        return boodschap;
+      }
+    });
+  </script>
+</body>
+
+</html>
