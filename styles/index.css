@@ -136,12 +136,6 @@ div{
 .form{
   background-color: var(--color-card);
   color: var(--color-text);
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  align-self: center;
-  top: 75%;
-  right: 40%;
   margin: 10px;
   padding: 10px;
   border-radius: 20px;
@@ -150,21 +144,15 @@ div{
   text-decoration: none;
 }
 
-#verlaat {
-  background-color: var(--color-card);
-  color: var(--color-text);
+.knoppen{
   display: flex;
-  flex-direction: column;
-  position: fixed;
+  flex-direction: row;
   align-self: center;
+  position: fixed;
   top: 75%;
-  left: 40%;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 20px;
-  z-index: 91;
-  box-shadow: 0 4px 10px var(--color-accent);
 }
+
+
 
 
 @media (max-width: 768px) {

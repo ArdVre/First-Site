@@ -34,21 +34,6 @@
             document.getElementById("bedankt-tekst").textContent = "Je hebt nog geen gegevens ingevuld.";
         }
     </script>
-    <script>
-        window.addEventListener("beforeunload", function (e) {
-          const voornaam = localStorage.getItem("voornaam");
-      
-          if (voornaam) {
-            const boodschap = `Bedankt voor je bezoek, ${voornaam}! We hopen je snel weer te zien.`;
-      
-            // Let op: de returnValue moet worden gezet voor de alert-popup te werken.
-            e.preventDefault();
-            e.returnValue = boodschap; // Sommige browsers tonen hun eigen standaardtekst
-            return boodschap;
-          }
-        });
-      </script>
-      
 </body>
 
 </html>

@@ -54,18 +54,6 @@
           document.getElementById(currentPage.name).classList.add("active");
         }
     </script>
-    <script>
-      window.addEventListener("beforeunload", function (e) {
-        const voornaam = localStorage.getItem("voornaam");
-    
-        if (voornaam) {
-          const boodschap = `Bedankt voor je bezoek, ${voornaam}! We hopen je snel weer te zien.`;
-    
-          e.preventDefault();
-          e.returnValue = boodschap;
-          return boodschap;
-        }
-      });
-    </script>
+   
   </body>
 </html>
