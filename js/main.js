@@ -147,14 +147,5 @@ document.addEventListener('DOMContentLoaded', () => {
   setupLeaveConfirmation();
   
   // Exit confirmation
-  window.addEventListener('beforeunload', (e) => {
-    const firstName = localStorage.getItem('firstName');
-    
-    if (firstName) {
-      const message = `Bedankt voor je bezoek, ${firstName}! We hopen je snel weer te zien.`;
-      e.preventDefault();
-      e.returnValue = message;
-      return message;
-    }
-  });
+  
 }); 
