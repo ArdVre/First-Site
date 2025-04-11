@@ -42,7 +42,6 @@
     <div class="button">
       <input type="reset" id="reset">
 
-      <!-- <input type="submit" id="submit" value="verstuur"> -->
       <input type="submit" id="submit" value="Verzenden">
     </div>
 
@@ -53,7 +52,7 @@
   const form = document.querySelector(".form");
 
   form.addEventListener("submit", function(e) {
-      e.preventDefault(); // voorkom standaard verzenden
+      e.preventDefault();
 
       const voornaam = document.getElementById("voornaam").value.trim();
       const achternaam = document.getElementById("achternaam").value.trim();
