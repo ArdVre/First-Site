@@ -43,38 +43,38 @@ body {
     margin: 10px;
     justify-content: space-around;
     height: 50px;
-    
+
 }
 
-#reset{
-    color:var(--color-text);
+#reset {
+    color: var(--color-text);
     background-color: red;
     width: 200px;
     border-radius: 10px;
 }
 
-#submit{
+#submit {
     color: var(--color-text);
-    background-color: green; 
-    width: 200px;  
+    background-color: green;
+    width: 200px;
     border-radius: 10px;
 }
 
-.button{
+.button {
     display: flex;
     flex-direction: row;
     margin: 50px;
     width: 75%;
     text-align: center;
-    
+
 }
 
-.input{
+.input {
     border-radius: 10px;
     padding: 25px;
 }
 
-.back{
+.back {
     color: white;
     font-size: 35px;
     padding-top: 0px;
@@ -87,25 +87,27 @@ body {
     text-align: center;
     position: fixed;
     left: 27%;
-    &:hover {
-        background-color: #f4f4f4;
-        color: #4777de;
-        transition: background-color 0.3s, color 0.3s;
-      }
+
+}
+
+:hover {
+    background-color: #f4f4f4;
+    color: #4777de;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 @media (max-width: 768px) {
     body {
-      padding-top: 170px;
+        padding-top: 170px;
     }
-  
+
     nav,
     header {
-      height: auto;
-      min-height: 70px;
+        height: auto;
+        min-height: 70px;
     }
-  
+
     header {
-      top: 70px;
+        top: 70px;
     }
-  }
+}
